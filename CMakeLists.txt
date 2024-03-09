@@ -10,7 +10,6 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sonia_common_cpp REQUIRED)
-find_package(sonia_common_ros2 REQUIRED)
 find_package(hardware_interface_manager REQUIRED)
 
 # target_link_libraries(dropper_test sonia_common_cpp)
@@ -30,7 +29,7 @@ install(TARGETS
 ${PROJECT_NAME}
   DESTINATION lib/${PROJECT_NAME})
 
-ament_target_dependencies(${PROJECT_NAME} rclcpp sonia_common_cpp sonia_common_ros2 hardware_interface_manager)
+ament_target_dependencies(${PROJECT_NAME} rclcpp sonia_common_cpp hardware_interface_manager)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
